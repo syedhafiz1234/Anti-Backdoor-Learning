@@ -28,6 +28,7 @@ WRN-16-1, CIFAR-10, GridTrigger, target label 0, weights: ./weight/backdoored_mo
 Run the following command to verify the unlearning effect:
 
 $ python quick_unlearning_demo.py 
+
 The training logs are shown below. 1% isolation = 500 images from poisoned CIFAR-10. It shows the ASR (bad acc) of drops from 99.99% to 0.48% with no obviouse drop of clean acc.
 
 Epoch,Test_clean_acc,Test_bad_acc,Test_clean_loss,Test_bad_loss
@@ -42,7 +43,6 @@ Epoch,Test_clean_acc,Test_bad_acc,Test_clean_loss,Test_bad_loss
 4,82.0111111111111,0.7111111111111111,1.1183592330084906,26.754894670274524
 Epoch,Test_clean_acc,Test_bad_acc,Test_clean_loss,Test_bad_loss
 5,81.86666666666666,0.4777777777777778,1.1441074348025853,30.429284422132703
-The unlearned model will be saved to 'weight/ABL_results/<model_name>.tar'
 
 Please read quick_unlearning_demo.py to adjust the default parameters for your experiment.
 
